@@ -1,3 +1,8 @@
+'''Используя сайт https://randomfox.ca/floof/ 
+   и библиотеку tkinter, в коде создается генератор картинок.
+   Открывается окно, состоящее из картинки и кнопки,
+   нажатие на которую меняет картинку на следующую'''
+
 import requests
 import tkinter as tk
 from PIL import Image, ImageTk
@@ -9,6 +14,7 @@ def generate_fox():
     label.config(image=(img_ref := ImageTk.PhotoImage(img_data)), text="")
     label.image = img_ref
 
+#window
 window = tk.Tk()
 window.title("FOX GENERATOR")
 label = tk.Label(window, text="Loading....", font=("Arial", 14))
